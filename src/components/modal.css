@@ -1,0 +1,47 @@
+.modaloverlay{
+    background-color: rgba(0, 0, 0, 0.26);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    position: inherit;
+
+}
+
+.CardWrapper {
+    text-align: center;
+	display: grid;
+    width: 50rem;
+    height: auto;
+    grid-template-columns: auto auto;
+    /* margin: 30vh; */
+    gap: 50px;
+    background-color: rgba(243, 243, 243, 0.856);
+    border-radius: 8px;
+    overflow: hidden;
+    transform: rotateX();
+    
+}
+
+.ImageWrapper{
+width: 18rem;
+/* height: 40rem; */
+}
+
+.cardModalImage{
+width: auto;
+height: 25rem;
+object-fit: fill;
+}
+
+.TextWrapper{
+/* transform: translateY(0%, -50%); */
+padding: 5rem .5rem;
+}
+
+.heading{
+
+}
+
+.subHeading{
+
+}
