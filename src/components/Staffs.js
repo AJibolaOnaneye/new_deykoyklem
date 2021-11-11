@@ -51,20 +51,20 @@ const Staffs = ({image, description, heading, qualities, showDialog, setShowDial
 }
 
 const MainWrapper = styled.div`
-  padding: 24px;
-  padding-top: 64px;
+  padding: 64px 24px;
   text-align: center;
-  position: relative;
+  // max-width: 100vw;
+ 
   
+
   @media ${BREAKPOINTS.tablet} {
-    padding: 58px;
-    padding-top: 56px;
+    padding: 56px 58px;
+   
   }
 
   @media ${BREAKPOINTS.desktop} {
-    padding: 85px;
-    padding-top: 100px;
-    display: inline-block;
+    padding: 100px 85px;
+    max-width: 100%;
 `;
 
 const Wrapper = styled.section`
@@ -88,7 +88,7 @@ const Wrapper = styled.section`
 
   @media ${BREAKPOINTS.desktop} {
     padding: 100px 65px 70px 63px;
-  
+
   }
 
   // Dark grey background
@@ -117,7 +117,7 @@ const Intro = styled.div`
   @media ${BREAKPOINTS.tablet} {
     max-width: 540px;
     margin: auto;
-    margin-bottom: 70px;
+    // margin-bottom: 70px;
   }
 
   @media ${BREAKPOINTS.tablet} {
@@ -141,7 +141,6 @@ margin: 25px 0px;
 `;
 
 const TopLine = styled.hr`
-z-index: 1;
 width: 54px;
 height: 5px;
 margin: auto;
@@ -152,7 +151,6 @@ position: relative;
 
 const BottomLine = styled.hr`
 top: -3px;
-z-index: -1;
 border: none;
 width: 80%;
 height: 1px;

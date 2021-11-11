@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import styled from 'styled-components/macro';
 
 import { pageAnimation } from '../animations';
 import Hero from '../components/Hero';
@@ -8,7 +9,7 @@ import Staffs from '../components/Staffs';
 
 const Partners = () => {
     return (
-        <div>
+        <Container>
               <motion.main
 			variants={pageAnimation}
 			initial="hidden"
@@ -21,8 +22,12 @@ const Partners = () => {
 			/>
             <Staffs />
             </motion.main>
-        </div>
+        </Container>
     )
 }
+
+const Container = styled.div`
+
+`;
 
 export default Partners

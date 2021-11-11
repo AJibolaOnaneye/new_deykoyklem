@@ -3,7 +3,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    position: inherit;
+    /* position: inherit; */
+    
+    
 
 }
 
@@ -19,6 +21,8 @@
     border-radius: 8px;
     overflow: hidden;
     transform: rotateX();
+   z-index: 100 !important;
+
     
 }
 

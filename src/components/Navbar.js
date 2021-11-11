@@ -35,7 +35,6 @@ const Wrapper = styled.header`
 	height: 90px;
 
 	@media ${BREAKPOINTS.tablet} {
-		
 		height: 113px;
 	}
 `;
@@ -45,6 +44,7 @@ const HamburgerBtnWrapper = styled.div`
 	// before the NavLinks. To position the HamburgerButton visually all the way
 	// on right side of screen, had to give it a flexbox order.
 	order: 3;
+
 
 	// @media ${BREAKPOINTS.tablet} {
 	// 	display: flex;

@@ -9,6 +9,7 @@ import Attribution from './components/Attribution';
 import OurService from './pages/OurService';
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

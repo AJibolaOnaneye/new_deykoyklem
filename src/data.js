@@ -83,7 +83,7 @@ export const staffs = [
     image: pm,
     heading: "Mr. Oyekan Olusola",
     description: "Project Manager",
-    qualities: "Qualified and experience Surveyor/Geoinformatics with extensive knowledge in coastal erosion survey, Hydrography survey and Bathymetric charting, Beach profile, data plotting and archiving. The use of various surveying instruments for land and oceanographic surveying, satellite imagery processing snd analysis."
+    qualities: "Land/Hydrography Surveyor, Project Manager, Survey Engineer, GIS Consultant and Property Consultant"
    
   },
   {

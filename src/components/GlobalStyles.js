@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     /* Set core body defaults */
     body {
         min-height: 100vh;
+        // min-width: 100vw;
         text-rendering: optimizeSpeed;
         line-height: 1.5;
     }

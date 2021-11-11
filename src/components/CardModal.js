@@ -1,11 +1,8 @@
 import React from 'react'
-import ceo from '../assets/ceo.jpg'
-import './modal.css'
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 import '@reach/dialog/styles.css';
 import { COLORS, FONTS, FONT_SIZES, WEIGHTS, BREAKPOINTS } from '../constants';
-import Button from './Button';
 import { FaTimes } from "react-icons/fa";
 
 const CardModal = ({image, description, heading, qualities, showDialog, setShowDialog,}, props ) => {
@@ -13,8 +10,9 @@ const CardModal = ({image, description, heading, qualities, showDialog, setShowD
 	const exitModal = () => setShowDialog(false);
 
     return (
-        
-        <ModalOverlay isOpen={showDialog} onDismiss={close}>
+		<Container>
+
+        <ModalOverlay  isOpen={showDialog} onDismiss={close}>
 
         <ModalContent>
             <ModalImageWrapper >
@@ -30,11 +28,16 @@ const CardModal = ({image, description, heading, qualities, showDialog, setShowD
 			</CloseIcon>
         </ModalContent>
         </ModalOverlay>
+		</Container>
+        
     )
 }
 
 export default CardModal
 
+const Container = styled.div`
+
+`;
 
 const ModalOverlay = styled(DialogOverlay)`
 
@@ -42,12 +45,41 @@ const ModalOverlay = styled(DialogOverlay)`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	// z-index: 2;
 	
 `;
 
 const ModalContent = styled(DialogContent)`
-width: 50rem;
+width: 40rem;
 height: 25rem;
+	padding: 0;
+	overflow: hidden;
+	border-radius: 8px;
+    text-align: center;
+	display: flex;
+	flex-direction: column;
+    gap: 10px;
+    background-color: ${COLORS.white};
+	position: relative;
+
+	@media ${BREAKPOINTS.tablet} {
+		margin: 20px;
+		width: 50rem;
+     height: 25rem;
+	padding: 0;
+	overflow: hidden;
+	border-radius: 8px;
+    text-align: center;
+	display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    background-color: ${COLORS.white};
+	position: relative;     
+	}
+	@media ${BREAKPOINTS.laptop} {
+		// padding: 65px 10px;
+		width: 50rem;
+     height: 25rem;
 	// max-width: 540px;
 	padding: 0;
 	overflow: hidden;
@@ -58,6 +90,8 @@ height: 25rem;
     gap: 10px;
     background-color: ${COLORS.white};
 	position: relative;
+	margin-right: 0;
+	}
 
 `;
 
@@ -67,11 +101,16 @@ const ModalImageWrapper = styled.div`
 width: 18rem;
 `;
 const ModalImage = styled.img`
-max-width: 100%;
-width: auto;
-height: 25rem;
-object-fit: fill;
+display: none;
 
+@media ${BREAKPOINTS.tablet} {
+	max-width: 100%;
+	width: auto;
+	height: 25rem;
+	object-fit: fill;
+	display: block;
+	
+}
 @media ${BREAKPOINTS.laptop} {
 	max-width: 100%;
 	width: 400px;
@@ -83,8 +122,9 @@ object-fit: fill;
 
 const Heading = styled.h3`
 	// color: ${COLORS.white};
-	font-size: 28px;
+	font-size: 24px;
 	line-height: 1.14;
+	padding: 1rem 0;
 
 	@media ${BREAKPOINTS.tablet} {
 		font-size: ${FONT_SIZES.m};
@@ -95,6 +135,7 @@ const SubHeading = styled.h5`
 	// color: ${COLORS.white};
 	font-size: 18px;
 	line-height: 1.14;
+	padding: .5rem 0;
    
 
 	@media ${BREAKPOINTS.tablet} {
@@ -111,9 +152,9 @@ const SubHeading = styled.h5`
 
 const ContentWrapper = styled.div`
 
-	padding: 24px;
-	padding-top: 40px;
-    max-widht: 50rem;
+	padding: 54px 3px;
+	// padding-top: 40px;
+    max-width: 50rem;
 	// color: ${COLORS.grey[500]};
 
 	@media ${BREAKPOINTS.tablet} {
